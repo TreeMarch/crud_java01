@@ -71,9 +71,10 @@ public class Repository {
             preparedStatement.setString(2, student.getEmail());
             preparedStatement.setString(3, student.getId());
             preparedStatement.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Update");
             connection.close();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            JOptionPane.showMessageDialog(null,e);
         }
         return student;
     }
